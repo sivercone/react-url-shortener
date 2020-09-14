@@ -1,0 +1,165 @@
+@import 'var';
+
+.links {
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px 5px;
+      font-weight: 700;
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px 5px;
+
+      &:hover {
+         background-color: darken($white, $amount: 10);
+      }
+
+      span {
+         margin-left: 10px;
+
+         &:nth-child(3n + 1) {
+            margin-left: 0;
+         }
+      }
+   }
+
+   &__index {
+      width: 35px;
+   }
+
+   &__from {
+      width: 600px;
+      overflow: auto;
+   }
+
+   &__to {
+      width: 500px;
+      overflow: auto;
+   }
+
+   &__details {
+      width: 4%;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s ease;
+
+      &:hover {
+         border-bottom: 1px solid $black;
+      }
+   }
+}
+
+.linkcard__details {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 25px 0;
+   font-size: 22px;
+
+   a {
+      color: $black;
+      border-bottom: 1px solid $black;
+   }
+}
+
+@media (max-width: 1024px) {
+   .links {
+      &__from {
+         margin-right: 25px;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .links {
+      &__top {
+         padding: 10px 0;
+         font-size: 15px;
+
+         span:last-child {
+            width: 15%;
+         }
+      }
+
+      &__index {
+         display: none;
+      }
+
+      &__content {
+         padding: 10px 0;
+
+         &:nth-child(2n + 1) {
+            background-color: darken($white, $amount: 1);
+         }
+
+         span {
+            margin: 0;
+            font-size: 15px;
+            min-height: 25px;
+            align-items: center;
+         }
+      }
+
+      &__from {
+         width: 25%;
+         overflow: auto;
+      }
+
+      &__to {
+         width: 40%;
+         overflow: auto;
+      }
+
+      &__details {
+         width: 17%;
+
+         &:hover {
+            border-bottom: 1px solid transparent;
+         }
+      }
+   }
+
+   .linkcard__details {
+      flex-direction: column;
+      font-size: 30px;
+
+      a {
+         max-width: 95%;
+         overflow: auto;
+         text-align: center;
+      }
+   }
+}
+
+@media (max-width: 575px) {
+   .linkcard__details {
+      font-size: 22px;
+   }
+}
+
+@media (max-width: 350px) {
+   .links {
+      &__top {
+         font-size: 12px;
+      }
+      &__content {
+         span {
+            font-size: 12px;
+         }
+      }
+   }
+
+   .linkcard {
+      h1 {
+         margin-bottom: 15px;
+      }
+   }
+}

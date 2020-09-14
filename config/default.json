@@ -1,0 +1,6 @@
+{
+   "port": 5000,
+   "jwtSecret": "MERNyoutube",
+   "mongoUri": "mongodb+srv://leansherm:dbMERN@cluster0.d6yus.azure.mongodb.net/app?retryWrites=true&w=majority",
+   "baseUrl": "http://localhost:5000"
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+@import 'var';
+@import 'nav';
+@import 'links';
+@import 'auth';
+@import 'loader';
+
+body {
+   margin: 0;
+
+   font-family: 'Syne', sans-serif;
+   font-size: 18px;
+   background-color: $white;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   list-style: none;
+   outline: none;
+}
+
+a,
+h2,
+h3,
+h4,
+h5,
+p {
+   margin: 0;
+   text-decoration: none;
+   color: inherit;
+}
+
+h1 {
+   margin: 0;
+   margin-bottom: 50px;
+   letter-spacing: 1px;
+}
+
+button {
+   padding: 10px 0;
+   width: 100%;
+
+   background-color: $black;
+   color: $white;
+   border-radius: 3px;
+   border: 0;
+   font-family: 'Syne', sans-serif;
+   font-size: 24px;
+   outline: none;
+   cursor: pointer;
+
+   &:hover {
+      background-color: lighten($black, $amount: 5);
+   }
+}
+
+input {
+   font-family: 'Syne', sans-serif;
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto;
+}
+
+.link_input {
+   width: 100%;
+   height: 50px;
+   border: 0;
+   font-size: 24px;
+   background-color: transparent;
+   border-bottom: 2px solid $black;
+   margin-bottom: 25px;
+
+   &:focus,
+   &:hover {
+      background-color: darken($white, $amount: 3);
+   }
+}
+
+@media (max-width: 1024px) {
+   .container {
+      width: 85%;
+   }
+}
+
+@media (max-width: 768px) {
+   h1 {
+      text-align: center;
+   }
+
+   .container {
+      width: 90%;
+   }
+}
+
+@media (max-width: 575px) {
+   .container {
+      width: 95%;
+   }
+}
